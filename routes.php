@@ -5,6 +5,10 @@ if(!empty($_GET['page'])) {
 		case 'test':
 			$page = 'test';
 			break;
+
+		case 'client_add':
+			$page = 'client_form';
+			break;
 		
 		default:
 			$page = 'home';

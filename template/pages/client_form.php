@@ -1,11 +1,9 @@
-<h4 class="font-weight-bold py-3 mb-0">Formulaire d'ajout des clients</h4>
-<div class="text-muted small mt-0 mb-4 d-block breadcrumb">
-	<ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
-		<li class="breadcrumb-item"><a href="#">Clients</a></li>
-		<li class="breadcrumb-item active">Data</li>
-	</ol>
-</div>
+<?php 
+	$title = 'Formulaire d\'enregistrements des clients';
+	$page = 'Clients';
+	$section = 'Ajout'; 
+	include('template/partials/breadcrumb.php'); 
+?>
 
 <div class="card mb-4">
 	<div class="card-body">

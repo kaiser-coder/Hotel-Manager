@@ -3,7 +3,7 @@
 <html lang="en" class="material-style layout-fixed">
 
 <head>
-    <title>Empire | B4+ admin template by Srthemesvilla</title>
+    <title>Hotel Manager App</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -51,34 +51,34 @@
             <!-- [ Logo ] End -->
 
             <!-- [ Form ] Start -->
-            <form class="my-5">
+            <form class="my-5" action="../src/auth/sign_in.php" method="post">
                 <div class="form-group">
-                    <label class="form-label">Email</label>
-                    <input type="text" class="form-control">
+                    <label class="form-label">Nom d'utilisateur</label>
+                    <input type="text" class="form-control" name="username">
                     <div class="clearfix"></div>
                 </div>
                 <div class="form-group">
                     <label class="form-label d-flex justify-content-between align-items-end">
-                        <span>Password</span>
-                        <a href="pages_authentication_password-reset.html" class="d-block small">Forgot password?</a>
+                        <span>Mot de passe</span>
+                        <!-- <a href="pages_authentication_password-reset.html" class="d-block small">Forgot password?</a> -->
                     </label>
-                    <input type="password" class="form-control">
+                    <input type="password" class="form-control" name="pass">
                     <div class="clearfix"></div>
                 </div>
                 <div class="d-flex justify-content-between align-items-center m-0">
-                    <label class="custom-control custom-checkbox m-0">
+                   <!--  <label class="custom-control custom-checkbox m-0">
                         <input type="checkbox" class="custom-control-input">
                         <span class="custom-control-label">Remember me</span>
-                    </label>
-                    <button type="button" class="btn btn-primary">Sign In</button>
+                    </label> -->
+                    <button type="submit" class="btn btn-primary">Se connecter</button>
                 </div>
             </form>
             <!-- [ Form ] End -->
 
-            <div class="text-center text-muted">
+            <!-- <div class="text-center text-muted">
                 Don't have an account yet?
                 <a href="pages_authentication_register-v1.html">Sign Up</a>
-            </div>
+            </div> -->
 
         </div>
     </div>

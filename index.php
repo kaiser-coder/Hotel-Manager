@@ -1,29 +1,25 @@
 <?php
 
-# Database connexion
-$config = require(__DIR__.'/config.php');
+session_start();
 
-$dns = 'mysql:host='. $config['host'] .';dbname='. $config['db_name'];
-$user = $config['user'];
-$password = $config['password'];
+if(!empty($_SESSION['user_id'])) {
+	# Routes
+	if(!empty($_GET['page'])) {
 
-try {
-   $bdd = new PDO($dns, $user, $password);
-} catch (Exception $e) {
-   throw $e;
-}
+		switch ($_GET['page']) {
+			case 'test':
+				include 'pages/test.php';
+				break;
+			
+			default:
+				include 'pages/home.php';
+				break;
+		}
 
-# Routes
-if(isset($_GET['pages'])) {
-   switch ($_GET['pages']) {
-      case 'booking':
-         include __DIR__. '/pages/booking/test.php';
-         break;
-      
-      default:
-         include __DIR__. '/pages/dashboard/home.php';
-         break;
-   }
+	} else {
+		include 'pages/home.php';
+	}
+
 } else {
-   include __DIR__. '/pages/dashboard/home.php';
+   include 'pages/login.php';
 }

@@ -22,7 +22,7 @@
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-6">
-					<label class="form-label">Sexe</label>
+					<label class="form-label">Genre</label>
 					<select class="custom-select" name="gender">
 						<option>Monsieur</option>
 						<option>Madame</option>

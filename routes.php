@@ -15,10 +15,10 @@ if(isset($_SERVER['PATH_INFO'])) {
 			break;
 		
 		default:
-			die('Error 404');
+			$page = '404';
 			break;
 	}
 
 } else {
-	die('Error 404');
+	$page = '404';
 }

@@ -1,7 +1,5 @@
 <?php 
 	$title = 'Formulaire d\'enregistrements des clients';
-	$page = 'Clients';
-	$section = 'Ajout'; 
 	include('template/partials/breadcrumb.php'); 
 ?>
 

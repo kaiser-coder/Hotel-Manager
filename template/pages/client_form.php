@@ -9,49 +9,50 @@
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label class="form-label">Nom</label>
-					<input type="text" class="form-control" placeholder="Nom" name="first_name">
+					<input type="text" class="form-control" placeholder="Nom" name="first_name" required>
 					<div class="clearfix"></div>
 				</div>
 				<div class="form-group col-md-6">
 					<label class="form-label">Prénom</label>
-					<input type="text" class="form-control" placeholder="Prénom" name="last_name">
+					<input type="text" class="form-control" placeholder="Prénom" name="last_name" required>
 					<div class="clearfix"></div>
 				</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label class="form-label">Genre</label>
-					<select class="custom-select" name="gender">
-						<option>Monsieur</option>
-						<option>Madame</option>
+					<select class="custom-select" name="gender" required>
+						<option value="">Selectionnez une option</option>
+						<option value="mr">Monsieur</option>
+						<option value="m.">Madame</option>
 					</select>
 				</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-12">
 					<label class="form-label">Nationalité</label>
-					<input type="text" class="form-control" placeholder="Nationalité" name="nationality">
+					<input type="text" class="form-control" placeholder="Nationalité" name="nationality" required>
 					<div class="clearfix"></div>
 				</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-12">
 					<label class="form-label">Adresse</label>
-					<input type="text" class="form-control" placeholder="Adresse" name="address">
+					<input type="text" class="form-control" placeholder="Adresse" name="address" required>
 					<div class="clearfix"></div>
 				</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-12">
 					<label class="form-label">Téléphone</label>
-					<input type="text" class="form-control" placeholder="Numéro de téléphone" name="phone_number">
+					<input type="text" class="form-control" placeholder="Numéro de téléphone" name="phone_number" required>
 					<div class="clearfix"></div>
 				</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-12">
 					<label class="form-label">CIN</label>
-					<input type="text" class="form-control" placeholder="Carte d'Identité Nationale">
+					<input type="text" class="form-control" placeholder="Carte d'Identité Nationale" required>
 					<div class="clearfix"></div>
 				</div>
 			</div>

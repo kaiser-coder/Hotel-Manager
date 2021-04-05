@@ -29,6 +29,9 @@
 	<link rel="stylesheet" href="/assets/libs/perfect-scrollbar/perfect-scrollbar.css">
 	<link rel="stylesheet" href="/assets/libs/flot/flot.css">
 
+	<!-- DataTable -->
+	<link rel="stylesheet" href="/assets/plugins/DataTables-1.10.24/css/dataTables.bootstrap4.min.css">
+
 </head>
 
 <body>
@@ -95,6 +98,17 @@
 	<script src="/assets/js/demo.js"></script>
 	<script src="/assets/js/analytics.js"></script>
 	<script src="/assets/js/pages/dashboards_index.js"></script>
+
+	<!-- DataTable -->
+	<script src="/assets/plugins/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+	<script src="/assets/plugins/DataTables-1.10.24/js/dataTables.bootstrap4.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$('#my_table').DataTable();
+		});
+	</script>
+	
 </body>
 
 </html>

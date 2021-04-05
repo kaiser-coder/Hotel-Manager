@@ -177,8 +177,8 @@
 					<a href="javascript:" class="dropdown-item">
 						<i class="feather icon-settings text-muted"></i> &nbsp; Account settings</a>
 					<div class="dropdown-divider"></div>
-					<a href="javascript:" class="dropdown-item">
-						<i class="feather icon-power text-danger"></i> &nbsp; Log Out</a>
+					<a href="/src/auth/sign_out.php" class="dropdown-item">
+						<i class="feather icon-power text-danger"></i> &nbsp; Déconnexion</a>
 				</div>
 			</div>
 		</div>

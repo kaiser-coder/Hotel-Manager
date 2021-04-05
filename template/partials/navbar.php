@@ -3,7 +3,7 @@
 	<!-- Brand demo (see assets/css/demo/demo.css) -->
 	<a href="index.html" class="navbar-brand app-brand demo d-lg-none py-0 mr-4">
 		<span class="app-brand-logo demo">
-			<img src="assets/img/logo-dark.png" alt="Brand Logo" class="img-fluid">
+			<img src="/assets/img/logo-dark.png" alt="Brand Logo" class="img-fluid">
 		</span>
 		<span class="app-brand-text demo font-weight-normal ml-2">Empire</span>
 	</a>
@@ -19,7 +19,7 @@
 		<span class="navbar-toggler-icon"></span>
 	</button>
 
-	<div class="navbar-collapse collapse" id="layout-navbar-collapse">
+	<div class="navbar-collapse collapse" id="layout-navbar-collapse" style="padding-top: 7px">
 		<!-- Divider -->
 		<hr class="d-lg-none w-100 my-2">
 

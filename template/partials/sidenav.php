@@ -2,7 +2,7 @@
 	<!-- Brand demo (see assets/css/demo/demo.css) -->
 	<div class="app-brand demo">
 		<span class="app-brand-logo demo">
-			<img src="assets/img/logo.png" alt="Brand Logo" class="img-fluid">
+			<img src="/assets/img/logo.png" alt="Brand Logo" class="img-fluid">
 		</span>
 		<a href="index.html" class="app-brand-text demo sidenav-text font-weight-normal ml-2">Hotel Manager App</a>
 		<a href="javascript:" class="layout-sidenav-toggle sidenav-link text-large ml-auto">
@@ -33,12 +33,12 @@
 			</a>
 			<ul class="sidenav-menu">
 				<li class="sidenav-item">
-					<a href="bui_alert.html" class="sidenav-link">
+					<a href="/index.php/clients/list" class="sidenav-link">
 						<div>Liste des clients</div>
 					</a>
 				</li>
 				<li class="sidenav-item">
-					<a href="index.php?page=client_add" class="sidenav-link">
+					<a href="/index.php/clients/register" class="sidenav-link">
 						<div>Formulaire d'ajout</div>
 					</a>
 				</li>

@@ -1,20 +1,24 @@
 <?php
 
-if(!empty($_GET['page'])) {
-	switch ($_GET['page']) {
-		case 'test':
-			$page = 'test';
+if(isset($_SERVER['PATH_INFO'])) {
+	switch ($_SERVER['PATH_INFO']) {
+		case '/home':
+			$page = 'home';
 			break;
 
-		case 'client_add':
+		case '/clients/register':
 			$page = 'client_form';
+			break;
+
+		case '/clients/list':
+			$page = 'client_list';
 			break;
 		
 		default:
-			$page = 'home';
+			die('Error 404');
 			break;
 	}
 
 } else {
-	$page = 'home';
+	die('Error 404');
 }

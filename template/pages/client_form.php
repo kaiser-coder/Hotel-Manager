@@ -7,7 +7,7 @@
 
 <div class="card mb-4">
 	<div class="card-body">
-		<form>
+		<form action="/src/clients/store.php" method="post">
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label class="form-label">Nom</label>

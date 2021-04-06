@@ -16,7 +16,7 @@
 
 		<!-- Dashboards -->
 		<li class="sidenav-item active">
-			<a href="index.html" class="sidenav-link">
+			<a href="/index.php/home" class="sidenav-link">
 				<i class="sidenav-icon feather icon-home"></i>
 				<div>Accueil</div>
 			</a>

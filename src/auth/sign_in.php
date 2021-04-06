@@ -10,6 +10,8 @@ if($executed) {
 	
 	session_start();
 	$_SESSION['user_id'] = $user['id'];
+	$_SESSION['username'] = $user['username'];
+	
 	header('location: /index.php/home');
 
 } else {

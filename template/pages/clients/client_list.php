@@ -10,16 +10,7 @@
 	$clients = $query->fetchAll(PDO::FETCH_OBJ);
 ?>
 
-<?php
-	if(isset($_SESSION['alert-message'])) {
-?>
-<div class="alert alert-dark-<?php echo $_SESSION['alert-message']['title']; ?> alert-dismissible fade show">
-	<button type="button" class="close" data-dismiss="alert">×</button>
-	<?php echo $_SESSION['alert-message']['message']; ?>
-</div>
-<?php
-	}
-?>
+<?php include('template/partials/alert.php'); ?>
 
 <div class="card mb-4">
 	<div class="card-body">
@@ -50,13 +41,15 @@
 					<td><?php echo $client->status; ?></td>
 					<td class="actions">
 						<div class="btn-group">
-							<button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown"
+							<button type="button" class="btn btn-outline-primary btn-xs dropdown-toggle" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">
 								Action
 							</button>
+
 							<div class="dropdown-menu">
-								<a class="dropdown-item" href="">Modifier les infos</a>
-								<a class="dropdown-item" href="/src/clients/status.php?id=<?php echo $client->id; ?>">Désactiver le status</a>
+								<a class="dropdown-item" data-toggle="modal" data-target="#editModal<?php echo $client->id; ?>" style="cursor: pointer">Modifier les infos</a>
+
+								<a class="dropdown-item" href="/src/clients/status.php?id=<?php echo $client->id; ?>"><?php echo $label = $client->status == 'active' ? 'Désactiver' : 'Activer'; ?> le client</a>
 
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="/src/clients/delete.php?id=<?php echo $client->id; ?>">Supprimer le client</a>
@@ -64,8 +57,21 @@
 						</div>
 					</td>
 				</tr>
+
+				<?php
+				   $modal_config = array(
+						'form_path'   => 'clients/client_edit',
+						'data'        => $client,
+						'title'       => 'Mise à jour du client',
+						'action_form' => '/src/clients/edit.php',
+					);
+
+					include('template/partials/editModal.php'); 
+				?>
+
 				<?php } ?>
 			</tbody>
 		</table>
 	</div>
 </div>
+

@@ -19,7 +19,7 @@
 		<span class="navbar-toggler-icon"></span>
 	</button>
 
-	<div class="navbar-collapse collapse" id="layout-navbar-collapse" style="padding-top: 7px">
+	<div class="navbar-collapse collapse" id="layout-navbar-collapse">
 		<!-- Divider -->
 		<hr class="d-lg-none w-100 my-2">
 
@@ -165,7 +165,7 @@
 			<div class="demo-navbar-user nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
 					<span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
-						<img src="assets/img/avatars/1.png" alt class="d-block ui-w-30 rounded-circle">
+						<img src="/assets/img/avatars/1.png" alt class="d-block ui-w-30 rounded-circle">
 						<span class="px-1 mr-lg-2 ml-2 ml-lg-0">Cindy Deitch</span>
 					</span>
 				</a>

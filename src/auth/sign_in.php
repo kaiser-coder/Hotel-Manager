@@ -10,7 +10,7 @@ if($executed) {
 	
 	session_start();
 	$_SESSION['user_id'] = $user['id'];
-	header('location: ../../index.php');
+	header('location: /index.php/home');
 
 } else {
 	var_dump('Aucune entree trouvee');

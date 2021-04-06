@@ -7,11 +7,15 @@ if(isset($_SERVER['PATH_INFO'])) {
 			break;
 
 		case '/clients/register':
-			$page = 'client_form';
+			$page = 'clients/client_form';
 			break;
 
 		case '/clients/list':
-			$page = 'client_list';
+			$page = 'clients/client_list';
+			break;
+
+		case '/clients/edit':
+			$page = 'clients/client_update';
 			break;
 		
 		default:

@@ -16,7 +16,7 @@
 
 		<!-- Dashboards -->
 		<li class="sidenav-item active">
-			<a href="/index.php/home" class="sidenav-link">
+			<a href="/index.php/dashboard/home" class="sidenav-link">
 				<i class="sidenav-icon feather icon-home"></i>
 				<div>Accueil</div>
 			</a>
@@ -25,6 +25,13 @@
 		<!-- Layouts -->
 		<li class="sidenav-divider mb-1"></li>
 		<li class="sidenav-header small font-weight-semibold">Général</li>
+
+		<li class="sidenav-item">
+			<a href="/index.php/bookings/register" class="sidenav-link">
+				<i class="sidenav-icon feather icon-plus"></i>
+				<div>Nouvelle réservation</div>
+			</a>
+		</li>
 
 		<li class="sidenav-item">
 			<a href="javascript:" class="sidenav-link sidenav-toggle">

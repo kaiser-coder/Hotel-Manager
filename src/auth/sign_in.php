@@ -12,7 +12,7 @@ if($executed) {
 	$_SESSION['user_id'] = $user['id'];
 	$_SESSION['username'] = $user['username'];
 	
-	header('location: /index.php/home');
+	header('location: /index.php/dashboard/home');
 
 } else {
 	var_dump('Aucune entree trouvee');

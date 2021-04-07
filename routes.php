@@ -2,7 +2,7 @@
 
 if(isset($_SERVER['PATH_INFO'])) {
 	switch ($_SERVER['PATH_INFO']) {
-		case '/home':
+		case '/dashboard/home':
 			$page = 'home';
 			break;
 
@@ -16,6 +16,10 @@ if(isset($_SERVER['PATH_INFO'])) {
 
 		case '/clients/edit':
 			$page = 'clients/client_update';
+			break;
+
+		case '/bookings/register':
+			$page = 'bookings/booking_form';
 			break;
 		
 		default:

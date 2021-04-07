@@ -32,6 +32,9 @@
 	<!-- DataTable -->
 	<link rel="stylesheet" href="/assets/plugins/DataTables-1.10.24/css/dataTables.bootstrap4.min.css">
 
+	<!-- Select -->
+	<link rel="stylesheet" href="/assets/plugins/select2-4.0.13/dist/css/select2.css">
+
 </head>
 
 <body>
@@ -103,10 +106,14 @@
 	<script src="/assets/plugins/DataTables-1.10.24/js/jquery.dataTables.js"></script>
 	<script src="/assets/plugins/DataTables-1.10.24/js/dataTables.bootstrap4.js"></script>
 
+	<!-- Select -->
+	<script src="/assets/plugins/select2-4.0.13/dist/js/select2.full.js"></script>
 	<script>
 		$(document).ready(function () {
 			$('#my_table').DataTable();
 		});
+
+		$('#customSelect').select2();
 	</script>
 	
 </body>

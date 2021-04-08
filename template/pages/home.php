@@ -6,12 +6,22 @@
 ?>
 
 <?php
-	$query = $db->query('SELECT bookings.id as id, bookings.duration as duration, bookings.begin, clients.first_name as client_fn, clients.last_name as client_ln, bookings.created_at as created_at, bookings.updated_at as updated_at, bookings.`status` as status, rooms.number as room
+	$query1 = $db->query('SELECT bookings.id as id, bookings.duration as duration, bookings.begin, clients.first_name as client_fn, clients.last_name as client_ln, bookings.created_at as created_at, bookings.updated_at as updated_at, bookings.`status` as status, rooms.number as room
 	FROM bookings
 	join clients ON bookings.client_id = clients.id 
 	join rooms ON bookings.room = rooms.number');
 
-	$bookings = $query->fetchAll(PDO::FETCH_OBJ);
+	$bookings = $query1->fetchAll(PDO::FETCH_OBJ);
+?>
+
+<?php
+	# Counts
+	$query2 = $db->query('SELECT (SELECT COUNT(id) FROM clients) AS clients_count,
+		(SELECT COUNT(id) FROM bookings WHERE status = "en attente") AS bookings_count,
+		(SELECT COUNT(id) FROM rooms WHERE available = false) AS rooms_unavailable_count,
+		(SELECT COUNT(id) FROM rooms WHERE available = true) AS rooms_available_count');
+
+	$counts = $query2->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <?php include('template/partials/alert.php'); ?>
@@ -24,9 +34,9 @@
                <div class="card-body">
                   <div class="d-flex align-items-center justify-content-between">
                      <div class="">
-                        <h2 class="mb-2"> 256 </h2>
-                        <p class="text-muted mb-0"><span class="badge badge-primary">Revenue</span>
-                           Today</p>
+                        <h2 class="mb-2"><?php echo $counts['clients_count']; ?></h2>
+                        <p class="text-muted mb-0"><span class="badge badge-primary">Total</span>
+                           Clients</p>
                      </div>
                      <div class="lnr lnr-leaf display-4 text-primary"></div>
                   </div>
@@ -38,8 +48,8 @@
                <div class="card-body">
                   <div class="d-flex align-items-center justify-content-between">
                      <div class="">
-                        <h2 class="mb-2">8451</h2>
-                        <p class="text-muted mb-0"><span class="badge badge-success">20%</span> Stock
+                        <h2 class="mb-2"><?php echo $counts['bookings_count']; ?></h2>
+                        <p class="text-muted mb-0"><span class="badge badge-success">Total</span> Réservations
                         </p>
                      </div>
                      <div class="lnr lnr-chart-bars display-4 text-success"></div>
@@ -52,9 +62,9 @@
                <div class="card-body">
                   <div class="d-flex align-items-center justify-content-between">
                      <div class="">
-                        <h2 class="mb-2"> 31% <small></small></h2>
-                        <p class="text-muted mb-0">New <span class="badge badge-danger">20%</span>
-                           Customer</p>
+                        <h2 class="mb-2"> <?php echo $counts['rooms_unavailable_count']; ?> <small></small></h2>
+                        <p class="text-muted mb-0"><span class="badge badge-danger">Total</span>
+                           Chambres indisponibles</p>
                      </div>
                      <div class="lnr lnr-rocket display-4 text-danger"></div>
                   </div>
@@ -66,9 +76,9 @@
                <div class="card-body">
                   <div class="d-flex align-items-center justify-content-between">
                      <div class="">
-                        <h2 class="mb-2">158</h2>
-                        <p class="text-muted mb-0"><span class="badge badge-warning">$143.45</span>
-                           Profit</p>
+                        <h2 class="mb-2"><?php echo $counts['rooms_available_count']; ?></h2>
+                        <p class="text-muted mb-0"><span class="badge badge-warning">Total</span>
+                           Chambres dispo.</p>
                      </div>
                      <div class="lnr lnr-cart display-4 text-warning"></div>
                   </div>

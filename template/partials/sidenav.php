@@ -59,12 +59,12 @@
 			</a>
 			<ul class="sidenav-menu">
 				<li class="sidenav-item">
-					<a href="forms_layouts.html" class="sidenav-link">
+					<a href="/index.php/rooms/list" class="sidenav-link">
 						<div>Liste des chambres</div>
 					</a>
 				</li>
 				<li class="sidenav-item">
-					<a href="forms_input-groups.html" class="sidenav-link">
+					<a href="/index.php/rooms/create" class="sidenav-link">
 						<div>Ajout d'une chambre</div>
 					</a>
 				</li>

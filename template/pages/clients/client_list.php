@@ -58,16 +58,28 @@
 					</td>
 				</tr>
 
-				<?php
-				   $modal_config = array(
-						'form_path'   => 'clients/client_edit',
-						'data'        => $client,
-						'title'       => 'Mise à jour du client',
-						'action_form' => '/src/clients/edit.php',
-					);
-
-					include('template/partials/editModal.php'); 
-				?>
+				<!-- Modal -->
+				<div class="modal fade" id="editModal<?php echo $client->id; ?>" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<form action="/src/clients/edit.php" method="post">
+							<div class="modal-content">
+								<div class="modal-header">
+								<h5 class="modal-title" id="editModalLabel">Mise à jour du client</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								</div>
+								<div class="modal-body">
+								<?php include('client_edit.php'); ?>
+								</div>
+								<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+								<button type="submit" class="btn btn-primary">Sauvegarder</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
 
 				<?php } ?>
 			</tbody>

@@ -6,7 +6,7 @@
 ?>
 
 <?php
-	$query = $db->query('SELECT bookings.id as id, clients.first_name as client_fn, clients.last_name as client_ln, bookings.created_at as created_at, bookings.updated_at as updated_at, bookings.`status` as status, rooms.number as room
+	$query = $db->query('SELECT bookings.id as id, bookings.duration as duration, bookings.begin, clients.first_name as client_fn, clients.last_name as client_ln, bookings.created_at as created_at, bookings.updated_at as updated_at, bookings.`status` as status, rooms.number as room
 	FROM bookings
 	join clients ON bookings.client_id = clients.id 
 	join rooms ON bookings.room = rooms.number');
@@ -149,15 +149,30 @@
 							</div>
 						</td>
 					</tr>
-					<?php
-						$modal_config = array(
-							'form_path'   => 'bookings/booking_edit',
-							'data'        => $booking,
-							'title'       => 'Mise à jour de la réservation',
-							'action_form' => '/src/bookings/edit.php',
-						);
-						include('../partials/editModal.php');
-					?>
+
+					<!-- Modal -->
+					<div class="modal fade" id="editModal<?php echo $booking->id; ?>" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<form action="/src/bookings/edit.php" method="post">
+								<div class="modal-content">
+									<div class="modal-header">
+									<h5 class="modal-title" id="editModalLabel">Mise à jour de la réservation</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									</div>
+									<div class="modal-body">
+									<?php include('bookings/booking_edit.php'); ?>
+									</div>
+									<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+									<button type="submit" class="btn btn-primary">Sauvegarder</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
 					<?php
 						}
 					?>

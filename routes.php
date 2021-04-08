@@ -21,6 +21,14 @@ if(isset($_SERVER['PATH_INFO'])) {
 		case '/bookings/register':
 			$page = 'bookings/booking_form';
 			break;
+
+		case '/categories/add':
+			$page = 'categories/category_form';
+			break;
+
+		case '/categories/list':
+			$page = 'categories/category_list';
+			break;
 		
 		default:
 			$page = '404';

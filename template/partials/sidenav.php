@@ -46,26 +46,7 @@
 				</li>
 				<li class="sidenav-item">
 					<a href="/index.php/clients/register" class="sidenav-link">
-						<div>Formulaire d'ajout</div>
-					</a>
-				</li>
-			</ul>
-		</li>
-
-		<li class="sidenav-item">
-			<a href="javascript:" class="sidenav-link sidenav-toggle">
-				<i class="sidenav-icon lnr lnr-users"></i>
-				<div>Personnels</div>
-			</a>
-			<ul class="sidenav-menu">
-				<li class="sidenav-item">
-					<a href="forms_layouts.html" class="sidenav-link">
-						<div>Liste des personnels</div>
-					</a>
-				</li>
-				<li class="sidenav-item">
-					<a href="forms_input-groups.html" class="sidenav-link">
-						<div>Formulaire d'ajout</div>
+						<div>Enregistrer le client</div>
 					</a>
 				</li>
 			</ul>
@@ -84,7 +65,26 @@
 				</li>
 				<li class="sidenav-item">
 					<a href="forms_input-groups.html" class="sidenav-link">
-						<div>Formulaire d'ajout</div>
+						<div>Ajout d'une chambre</div>
+					</a>
+				</li>
+			</ul>
+		</li>
+
+		<li class="sidenav-item">
+			<a href="javascript:" class="sidenav-link sidenav-toggle">
+				<i class="sidenav-icon feather icon-tag"></i>
+				<div>Catégories</div>
+			</a>
+			<ul class="sidenav-menu">
+				<li class="sidenav-item">
+					<a href="/index.php/categories/list" class="sidenav-link">
+						<div>Liste des catégories</div>
+					</a>
+				</li>
+				<li class="sidenav-item">
+					<a href="/index.php/categories/add" class="sidenav-link">
+						<div>Ajout de catégorie</div>
 					</a>
 				</li>
 			</ul>

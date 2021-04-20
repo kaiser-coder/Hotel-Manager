@@ -1,11 +1,11 @@
 <?php
 
 session_start();
-$db = require('connection.php');
+$db = require('../../connection.php');
 
 # Insert client
 $query = $db->prepare('INSERT INTO clients(first_name, last_name, gender, nationality, `address`, phone_number) VALUES (?, ?, ?, ?, ?, ?)');
-$executed = $query->exec(array(
+$executed = $query->execute(array(
 	$_POST['first_name'],
 	$_POST['last_name'],
 	$_POST['gender'],

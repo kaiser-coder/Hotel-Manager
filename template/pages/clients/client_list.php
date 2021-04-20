@@ -14,7 +14,7 @@
 
 <div class="card mb-4">
 	<div class="card-body">
-		<table class="table table-striped" id="my_table" style="width:100%">
+		<table class="table table-striped table-responsive" id="my_table" style="width:100%">
 			<thead>
 				<tr>
 					<th>Nom & Prénom</th>

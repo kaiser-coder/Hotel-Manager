@@ -36,9 +36,9 @@
 					</span>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right">
-					<a href="javascript:" class="dropdown-item">
+					<!-- <a href="javascript:" class="dropdown-item">
 						<i class="feather icon-user text-muted"></i> &nbsp; Mon profil</a>
-					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div> -->
 					<a href="/src/auth/sign_out.php" class="dropdown-item">
 						<i class="feather icon-power text-danger"></i> &nbsp; Déconnexion</a>
 				</div>

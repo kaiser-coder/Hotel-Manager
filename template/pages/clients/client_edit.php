@@ -46,7 +46,7 @@
 <div class="form-row">
    <div class="form-group col-md-12">
       <label class="form-label">CIN</label>
-      <input type="text" class="form-control" placeholder="Carte d'Identité Nationale" value="<?php echo $client->ID_card ?>"  required>
+      <input type="text" class="form-control" name="id_card" placeholder="Carte d'Identité Nationale" value="<?php echo $client->ID_card ?>"  required>
       <div class="clearfix"></div>
    </div>
 </div>

@@ -52,7 +52,7 @@
 			<div class="form-row">
 				<div class="form-group col-md-12">
 					<label class="form-label">CIN</label>
-					<input type="text" class="form-control" placeholder="Carte d'Identité Nationale" required>
+					<input type="text" name="id_card" class="form-control" placeholder="Carte d'Identité Nationale" required>
 					<div class="clearfix"></div>
 				</div>
 			</div>
